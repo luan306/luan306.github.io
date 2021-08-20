@@ -20,6 +20,9 @@ html {
     box-sizing: border-box;
 }
 
+
+/* reponsite */
+
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -33,6 +36,23 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+
+/* test */
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid_column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.334%;
 }
 
 
@@ -70,7 +90,7 @@ html {
     outline: none;
     cursor: pointer;
     /* color: var(--text-color); */
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     line-height: 1.6rem;
@@ -106,4 +126,58 @@ html {
     position: relative;
     z-index: 1;
     animation: grow linear .1s;
+}
+
+
+/* selection */
+
+.select-input {
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    min-width: 200px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-input_label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    position: relative;
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    top: 1;
+}
+
+.select-input:hover .select-input_list {
+    display: block;
+}
+
+.select-input_list {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style: none;
+    padding: 8px 16px;
+    display: none;
+}
+
+.select-input_link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input_link:hover {
+    color: var(--primary-color);
 }
